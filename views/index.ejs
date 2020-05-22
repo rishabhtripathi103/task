@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <input list="dp" name="dp" min="1" max="100" placeholder="Enter discount percentage" value="1" onkeyup="getlist()">
+  <datalist id="dp"> </datalist>
+  <input list="" name="brname" placeholder="Enter brandname" onkeyup="getlist()" value="all">
+  <select name="Stock" onchange="getlist()">
+    <option value="0">In stock</option>
+    <option value="1">Out of Stock</option>
+  </select>
+  <input placeholder="Enter Date" type="date" value="2019-05-20" onchange="getlist()">
+</body>
+<script>
+  var d=document.getElementById("dp");
+  for(let i=0;i<=100;i++)
+  {
+    var option=document.createElement("option");
+    option.setAttribute("value",i);
+    d.appendChild(option);
+  }
+  function getlist()
+  {
+    
+  }
+</script>
+</html>
